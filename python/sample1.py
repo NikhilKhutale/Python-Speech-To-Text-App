@@ -29,10 +29,10 @@ r.pause_threshold = SILENCE_LIMIT
 # set up database connection
 try:
     mydb = mysql.connector.connect(
-        host=os.environ.get("DB_HOST"),
-        user=os.environ.get("DB_USERNAME"),
-        password=os.environ.get("DB_PASSWORD"),
-        database= os.environ.get("DB_DATA")
+        host=os.environ.get("PLANETSCALE_DB_HOST"),
+        user=os.environ.get("PLANETSCALE_DB_USERNAME"),
+        password=os.environ.get("PLANETSCALE_DB_PASSWORD"),
+        database= os.environ.get("PLANETSCALE_DB")
     )
 except mysql.connector.Error as err:
     print(f"Error connecting to MySQL: {err}")

@@ -6,10 +6,10 @@ import os
 
 # Set up database connection
 mydb = mysql.connector.connect(
-    host=os.environ.get("DB_HOST"),
-    user=os.environ.get("DB_USERNAME"),
-    password=os.environ.get("DB_PASSWORD"),
-    database= os.environ.get("DB_DATA")
+    host=os.environ.get("PLANETSCALE_DB_HOST"),
+    user=os.environ.get("PLANETSCALE_DB_USERNAME"),
+    password=os.environ.get("PLANETSCALE_DB_PASSWORD"),
+    database= os.environ.get("PLANETSCALE_DB")
 )
 
 # Create a dictionary of cities and states
