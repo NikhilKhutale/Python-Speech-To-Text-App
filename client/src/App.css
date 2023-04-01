@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+.App {
+  text-align: center;
+}
+
+.generate-data{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 0;
+}
+
+.generate-data-btn {
+  border-radius: 23px;
+  min-width: 179px;
+  height: 46px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 1.466667;
+  text-transform: uppercase;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.4s;
+  padding: 0 15px;
+  background-color: #717fe0;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.generate-data-btn:hover {
+  border-color: #777;
+  background-color: #000000;
+  color: #fff;
+}
+
+.microphone-div{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 70vh;
+}
+
+.microphone-btn {
+  background-color: #f0f0f0;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  height: 50px;
+  margin-right: 10px;
+  outline: none;
+  width: 50px;
+}
+
+.microphone-btn:hover {
+  background-color: #e0e0e0;
+}
+
+.fa-microphone {
+  color: #777;
+}
+
+.fa-beat {
+  animation: beat 1s infinite;
+}
+
+@keyframes beat {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid black;
+  padding: 8px;
+  text-align: center;
+}
+
+th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
