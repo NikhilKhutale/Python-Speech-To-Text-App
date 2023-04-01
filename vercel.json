@@ -10,6 +10,12 @@
         "src": "/.*",
         "dest": "index.js"
       }
-    ]
+    ],
+    "functions": {
+      "api/dataGenerator": {
+        "runtime": "vercel-python@latest",
+        "memory": 128
+      }
+    }
   }
   
