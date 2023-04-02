@@ -1,19 +1,18 @@
 {
-  "builds": [
-    {
-      "src": "./index.js",
-      "use": "@vercel/node"
-    },
-    {
-      "src": "./speech/requirements.txt",
-      "use": "@vercel/python"
+  "builds":[
+      {
+          "src":"./index.js",
+          "use":"@vercel/node"
+      },
+      {
+        "src":"./speech/requirements.txt",
+        "use":"@vercel/python"
     }
   ],
-  "routes": [
-    {
-      "src": "/.*",
-      "dest": "index.js"
-    }
-  ],
-  "files": ["apt.txt"]
+  "routes":[
+      {
+          "src":"/.*",
+          "dest":"index.js"
+      }
+  ]
 }
