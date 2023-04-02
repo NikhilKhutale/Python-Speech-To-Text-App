@@ -46,7 +46,7 @@ app.post('/api/start-recording', (req, res) => {
 
 app.post('/api/generate-data', (req, res) => {
   // Execute the Python script as a child process
-  const pythonProcess = spawn('python3', ['./speech/dataGenerator.py']);
+  const pythonProcess = spawn('python', ['./speech/dataGenerator.py']);
   
 
   // Listen for any errors from the Python script
