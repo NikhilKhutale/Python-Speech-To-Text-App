@@ -8,11 +8,11 @@ dotenv.config();
 const app = express();
 const port = process.env.PORT || 5000;
 
-console.log(path.resolve(__dirname, 'python', 'dataGenerator.py'))
+console.log(path.resolve(__dirname, 'speech', 'dataGenerator.py'))
 
 app.post('/api/start-recording', (req, res) => {
   // Execute the Python script as a child process
-  const pythonProcess = spawn('python', [path.resolve(__dirname, 'python', 'sample1.py')]);
+  const pythonProcess = spawn('python', [path.resolve(__dirname, 'speech', 'sample1.py')]);
 
   let results = '';
 
@@ -45,7 +45,7 @@ app.post('/api/start-recording', (req, res) => {
 
 app.post('/api/generate-data', (req, res) => {
   // Execute the Python script as a child process
-  const pythonProcess = spawn('python', [path.resolve(__dirname, 'python', 'dataGenerator.py')]);
+  const pythonProcess = spawn('python', [path.resolve(__dirname, 'speech', 'dataGenerator.py')]);
 
   // Listen for any errors from the Python script
   pythonProcess.stderr.on('data', (data) => {
