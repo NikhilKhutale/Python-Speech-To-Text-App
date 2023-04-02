@@ -1,21 +1,18 @@
 {
   "builds":[
-    {
-      "src":"./index.js",
-      "use":"@vercel/node"
-    },
-    {
-      "src":"./speech/requirements.txt",
-      "use":"@vercel/python",
-      "env": {
-        "PORTAUDIO": "portaudio19-dev"
-      }
+      {
+          "src":"./index.js",
+          "use":"@vercel/node"
+      },
+      {
+        "src":"./speech/requirements.txt",
+        "use":"@vercel/python"
     }
   ],
   "routes":[
-    {
-      "src":"/.*",
-      "dest":"index.js"
-    }
+      {
+          "src":"/.*",
+          "dest":"index.js"
+      }
   ]
 }
