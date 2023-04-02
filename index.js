@@ -12,7 +12,7 @@ console.log(path.resolve(__dirname, 'speech', 'dataGenerator.py'))
 
 app.post('/api/start-recording', (req, res) => {
   // Execute the Python script as a child process
-  const pythonProcess = spawn('/usr/local/bin/python', [path.resolve(__dirname, 'speech', 'sample1.py')]);
+  const pythonProcess = spawn('/usr/local/bin/speech', [path.resolve(__dirname, 'speech', 'sample1.py')]);
 
 
   let results = '';
