@@ -8,6 +8,8 @@ dotenv.config();
 const app = express();
 const port = process.env.PORT || 5000;
 
+console.log(path.resolve(__dirname, 'python', 'dataGenerator.py'))
+
 app.post('/api/start-recording', (req, res) => {
   // Execute the Python script as a child process
   const pythonProcess = spawn('python', path.resolve(__dirname, 'python', 'sample1.py'));
