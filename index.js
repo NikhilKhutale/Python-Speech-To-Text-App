@@ -46,12 +46,13 @@ app.post('/api/start-recording', (req, res) => {
 
 app.post('/api/generate-data', (req, res) => {
   // Execute the Python script as a child process
-  const pythonProcess = spawn('python', [path.resolve(__dirname, 'speech', 'dataGenerator.py')], {
+  const pythonProcess = spawn('/usr/bin/python', [path.resolve(__dirname, 'python', 'dataGenerator.py')], {
     env: {
       ...process.env,
-      PATH: process.env.PATH + ':/usr/local/bin'
+      PATH: process.env.PATH + ':/usr/bin'
     }
   });
+  
 
   // Listen for any errors from the Python script
   pythonProcess.stderr.on('data', (data) => {
