@@ -15,9 +15,5 @@
       "dest": "index.js"
     }
   ],
-  "install": [
-    {
-      "includeFiles": ["apt.txt"]
-    }
-  ]
+  "files": ["apt.txt"]
 }
