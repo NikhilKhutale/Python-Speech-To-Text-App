@@ -1,4 +1,4 @@
-./speech/pyaudio-0.2.11-cp39-cp39-linux_x86_64.whl
+./speech/PyAudio-0.2.13-cp39-cp39-win_amd64.whl
 SpeechRecognition==3.10.0
 pandas==1.3.2
 numpy==1.19.5
