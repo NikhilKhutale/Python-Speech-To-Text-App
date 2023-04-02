@@ -1,14 +1,14 @@
 {
-  "build": {
-    "env": {
-      "PATH": "/usr/local/bin:/usr/bin:/bin:/app/python"
-    }
-  },
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "index.js"
-    }
+  "builds":[
+      {
+          "src":"./index.js",
+          "use":"@vercel/node"
+      }
   ],
-  "builds": [{ "src": "index.js", "use": "@vercel/node" }]
+  "routes":[
+      {
+          "src":"/.*",
+          "dest":"index.js"
+      }
+  ]
 }

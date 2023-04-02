@@ -10,7 +10,7 @@ const port = process.env.PORT || 5000;
 
 app.post('/api/start-recording', (req, res) => {
   // Execute the Python script as a child process
-  const pythonProcess = spawn('python', [path.resolve(__dirname, 'python', 'sample1.py')]);
+  const pythonProcess = spawn('python', path.resolve(__dirname, 'python', 'sample1.py'));
 
   let results = '';
 
@@ -43,7 +43,7 @@ app.post('/api/start-recording', (req, res) => {
 
 app.post('/api/generate-data', (req, res) => {
   // Execute the Python script as a child process
-  const pythonProcess = spawn('python', [path.resolve(__dirname, 'python', 'dataGenerator.py')]);
+  const pythonProcess = spawn('python', path.resolve(__dirname, 'python', 'dataGenerator.py'));
 
   // Listen for any errors from the Python script
   pythonProcess.stderr.on('data', (data) => {
